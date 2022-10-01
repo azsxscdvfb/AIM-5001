@@ -1,0 +1,7 @@
+SELECT "Title" AS "AlbumTitle"
+FROM "Album"
+WHERE "ArtistId" = (
+	SELECT "ArtistId" 
+	FROM "Artist" 
+	WHERE "Name" = 'Kiss'
+);

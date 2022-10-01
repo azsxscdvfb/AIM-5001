@@ -1,0 +1,61 @@
+INSERT INTO "Genre" ("GenreId", "Name") VALUES (26, N'Romance');
+INSERT INTO "Genre" ("GenreId", "Name") VALUES (28, N'Action');
+INSERT INTO "Genre" ("GenreId", "Name") VALUES (29, N'Horror');
+
+INSERT INTO "Actor" ("ActorId", "Name") VALUES (1, N'AAA');
+INSERT INTO "Actor" ("ActorId", "Name") VALUES (2, N'BBB');
+INSERT INTO "Actor" ("ActorId", "Name") VALUES (3, N'CCC');
+INSERT INTO "Actor" ("ActorId", "Name") VALUES (4, N'DDD');
+INSERT INTO "Actor" ("ActorId", "Name") VALUES (5, N'EEE');
+
+INSERT INTO "Movie" ("MovieId", "MovieTitle", "LengthOfMovie", "GenreId", "ReleaseYear", "MoviePlot", "Price", "MediaTypeId","Link")
+VALUES (1,N'A1',120,26,1999,N'asdasdasdasdadasdqweqweqwewqewqeqweqwewqewqewqeqeqweqwewqeqwewqewqeeqweqeqwewqewqasdsadasdsadasdsadasdasdasdasdasdasdasdasdasdas'
+,9.99,3,N'1');
+INSERT INTO "Movie" ("MovieId", "MovieTitle", "LengthOfMovie", "GenreId", "ReleaseYear", "MoviePlot", "Price", "MediaTypeId","Link")
+VALUES (2,N'B2',120,26,1999,N'asdasdasdasdadasdqweqweqwewqewqeqweqwewqewqewqeqeqweqwewqeqwewqewqeeqweqeqwewqewqasdsadasdsadasdsadasdasdasdasdasdasdasdasdasdas'
+,9.99,3,N'1');
+INSERT INTO "Movie" ("MovieId", "MovieTitle", "LengthOfMovie", "GenreId", "ReleaseYear", "MoviePlot", "Price", "MediaTypeId","Link")
+VALUES (3,N'C3',120,27,1999,N'asdasdasdasdadasdqweqweqwewqewqeqweqwewqewqewqeqeqweqwewqeqwewqewqeeqweqeqwewqewqasdsadasdsadasdsadasdasdasdasdasdasdasdasdasdas'
+,9.99,3,N'1');
+INSERT INTO "Movie" ("MovieId", "MovieTitle", "LengthOfMovie", "GenreId", "ReleaseYear", "MoviePlot", "Price", "MediaTypeId","Link")
+VALUES (4,N'D4',120,26,1999,N'asdasdasdasdadasdqweqweqwewqewqeqweqwewqewqewqeqeqweqwewqeqwewqewqeeqweqeqwewqewqasdsadasdsadasdsadasdasdasdasdasdasdasdasdasdas'
+,9.99,3,N'1');
+INSERT INTO "Movie" ("MovieId", "MovieTitle", "LengthOfMovie", "GenreId", "ReleaseYear", "MoviePlot", "Price", "MediaTypeId","Link")
+VALUES (5,N'E5',120,28,1999,N'asdasdasdasdadasdqweqweqwewqewqeqweqwewqewqewqeqeqweqwewqeqwewqewqeeqweqeqwewqewqasdsadasdsadasdsadasdasdasdasdasdasdasdasdasdas'
+,9.99,3,N'1');
+
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(1,1);
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(1,2);
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(2,2);
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(2,3);
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(3,3);
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(3,4);
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(4,4);
+INSERT INTO "ActorsList" ("MovieId","ActorId") VALUES(5,5);
+
+INSERT INTO "Invoice" ("InvoiceId", "CustomerId", "InvoiceDate", "BillingAddress", "BillingCity", "BillingCountry", "BillingPostalCode", "Total")
+VALUES (413,53,'2010/1/18', N'Rotenturmstraﬂe 4, 1010 Innere Stadt', N'Vienne', N'Austria', N'1010', 19.98);
+INSERT INTO "Invoice" ("InvoiceId", "CustomerId", "InvoiceDate", "BillingAddress", "BillingCity", "BillingCountry", "BillingPostalCode", "Total")
+VALUES (414,43,'2010/1/18', N'Rotenturmstraﬂe 4, 1010 Innere Stadt', N'Vienne', N'Austria', N'1010', 9.99);
+INSERT INTO "Invoice" ("InvoiceId", "CustomerId", "InvoiceDate", "BillingAddress", "BillingCity", "BillingCountry", "BillingPostalCode", "Total")
+VALUES (415,33,'2010/1/18', N'Rotenturmstraﬂe 4, 1010 Innere Stadt', N'Vienne', N'Austria', N'1010', 9.99);
+INSERT INTO "Invoice" ("InvoiceId", "CustomerId", "InvoiceDate", "BillingAddress", "BillingCity", "BillingCountry", "BillingPostalCode", "Total")
+VALUES (416,56,'2010/1/18', N'Rotenturmstraﬂe 4, 1010 Innere Stadt', N'Vienne', N'Austria', N'1010', 19.98);
+INSERT INTO "Invoice" ("InvoiceId", "CustomerId", "InvoiceDate", "BillingAddress", "BillingCity", "BillingCountry", "BillingPostalCode", "Total")
+VALUES (417,50,'2010/1/18', N'Rotenturmstraﬂe 4, 1010 Innere Stadt', N'Vienne', N'Austria', N'1010', 9.99);
+
+INSERT INTO "InvoiceLine" ("InvoiceLineId", "InvoiceId", "MovieId", "UnitPrice", "Quantity")
+VALUES (2241,413,1,9.99,1);
+INSERT INTO "InvoiceLine" ("InvoiceLineId", "InvoiceId", "MovieId", "UnitPrice", "Quantity")
+VALUES (2242,413,2,9.99,1);
+INSERT INTO "InvoiceLine" ("InvoiceLineId", "InvoiceId", "MovieId", "UnitPrice", "Quantity")
+VALUES (2243,414,1,9.99,1);
+INSERT INTO "InvoiceLine" ("InvoiceLineId", "InvoiceId", "MovieId", "UnitPrice", "Quantity")
+VALUES (2244,415,3,9.99,1);
+INSERT INTO "InvoiceLine" ("InvoiceLineId", "InvoiceId", "MovieId", "UnitPrice", "Quantity")
+VALUES (2245,416,4,9.99,1);
+INSERT INTO "InvoiceLine" ("InvoiceLineId", "InvoiceId", "MovieId", "UnitPrice", "Quantity")
+VALUES (2246,416,5,9.99,1);
+INSERT INTO "InvoiceLine" ("InvoiceLineId", "InvoiceId", "MovieId", "UnitPrice", "Quantity")
+VALUES (2247,417,1,9.99,1);
+
