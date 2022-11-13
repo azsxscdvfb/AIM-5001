@@ -1,0 +1,12 @@
+SELECT c."CustomerId" , ge."Name"
+FROM "Customer" as c
+LEFT JOIN "Invoice" as i
+ON c."CustomerId" = i."CustomerId"
+LEFT JOIN "InvoiceLine" as il
+ON i."InvoiceId" = il."InvoiceId"
+LEFT JOIN "Track" as t
+ON t."TrackId" = il."TrackId"
+LEFT JOIN "Genre" as ge
+ON t."GenreId" = ge."GenreId"
+GROUP BY c."CustomerId", ge."Name"
+ORDER BY c."CustomerId"
