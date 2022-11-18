@@ -1,7 +1,0 @@
-select al."Title" AS "AlbumTitle", ar."Name" AS "ArtistName", t."Name" AS "TrackName", t."Composer"
-from "Album" al
-JOIN "Artist" ar 
-ON ar."ArtistId" = al."ArtistId"
-JOIN "Track" t
-ON t."AlbumId" = al."AlbumId"
-WHERE ar."Name" = 'Kiss'
